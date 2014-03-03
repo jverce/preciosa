@@ -11,6 +11,9 @@ local_settings.py
 # C extensions
 *.so
 
+#Vagrant
+*.vagrant
+
 # Packages
 *.egg
 *.egg-info
