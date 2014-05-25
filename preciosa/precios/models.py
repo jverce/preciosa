@@ -112,11 +112,12 @@ class Producto(models.Model):
     UM_UN = 'unidad'
     UM_M = 'm'
     UM_M2 = 'm2'
+    UM_GL = 'gl'        # galon
 
     UM_TRANS = {u'LT': UM_L, u'UN': UM_UN}
 
     UNIDADES_PESO = [UM_GRAMO, UM_KILO]
-    UNIDADES_VOLUMEN = [UM_ML, UM_L]
+    UNIDADES_VOLUMEN = [UM_ML, UM_L, UM_GL]
     UNIDADES_CHOICES = Choices(UM_GRAMO, UM_KILO, UM_ML, UM_L,
                                UM_UN, UM_M, UM_M2)
 
@@ -124,7 +125,7 @@ class Producto(models.Model):
     busqueda = models.CharField(max_length=250, editable=False)
 
     upc = models.CharField(verbose_name=u"Código de barras",
-                           max_length=13, unique=True, null=True, blank=True)
+                           max_length=13, null=True, blank=True)
     categoria = models.ForeignKey('Categoria', related_name='productos')
     marca = models.ForeignKey('Marca', null=True, blank=True)
     contenido = models.DecimalField(max_digits=5, decimal_places=1,
