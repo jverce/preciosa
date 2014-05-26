@@ -119,7 +119,7 @@ class Producto(models.Model):
     UNIDADES_PESO = [UM_GRAMO, UM_KILO]
     UNIDADES_VOLUMEN = [UM_ML, UM_L, UM_GL]
     UNIDADES_CHOICES = Choices(UM_GRAMO, UM_KILO, UM_ML, UM_L,
-                               UM_UN, UM_M, UM_M2)
+                               UM_UN, UM_M, UM_M2, UM_GL)
 
     descripcion = models.CharField(max_length=250)
     busqueda = models.CharField(max_length=250, editable=False)
