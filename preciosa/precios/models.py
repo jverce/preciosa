@@ -259,8 +259,8 @@ class Cadena(AbstractEmpresa):
                                      help_text="Ej: Jumbo y Vea son de Cencosud")
 
     class Meta:
-        verbose_name = u"cadena de supermercados"
-        verbose_name_plural = u"cadenas de supermercados"
+        verbose_name = u"cadena de comercios"
+        verbose_name_plural = u"cadenas de comercios"
 
 
 class EmpresaFabricante(AbstractEmpresa):
